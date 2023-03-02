@@ -17,9 +17,9 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveX = Input.GetAxis("Horizontal");
-        moveZ = Input.GetAxis("Vertical");
-        transform.Translate(moveX * force * Time.deltaTime, 0, moveZ * force * Time.deltaTime);
+        moveX = Input.GetAxis("Vertical");
+        moveZ = Input.GetAxis("Horizontal");
+        transform.Translate(moveX * force * Time.deltaTime, 0, moveZ * -1 *force * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
